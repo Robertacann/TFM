@@ -22,7 +22,7 @@ response = requests.get(url, headers=headers, params=querystring)
 if response.status_code == 200:
     data = response.json()
     st.success("Datos obtenidos correctamente")
-    st.json(data)  # 👈 Esto muestra el JSON en pantalla
+    st.json(data) 
 else:
     st.error(f"Error: {response.status_code}")
     st.text(response.text)
